@@ -1,0 +1,181 @@
+\hypertarget{_nibo__actions_8c}{}\doxysection{src/\+Nibo\+\_\+actions.c File Reference}
+\label{_nibo__actions_8c}\index{src/Nibo\_actions.c@{src/Nibo\_actions.c}}
+
+
+Set of functions used to control movements of Nibo.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Nibo\+\_\+actions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+short \mbox{\hyperlink{_nibo__actions_8c_adaeae15e188d8e437ac3de0fe0cde3cf}{Speedup}} (short Speed)
+\begin{DoxyCompactList}\small\item\em This function increases the speed of the Nibo to 7 if Nibo was not moving or sets it to 0 if Nibo was moving backward. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{_nibo__actions_8c_a0ba2a2a64a8563709143f2b4ab87b22d}{Slowdown}} (short Speed)
+\begin{DoxyCompactList}\small\item\em This function decreases the speed of the Nibo to -\/7 if Nibo was not moving or sets it to 0 if Nibo was moving forward. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{_nibo__actions_8c_a0d00aeba0adb937b4f7e246e671467de}{Reelection\+\_\+forced}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} own\+Id, short reelection\+\_\+delay, \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} maxnibos)
+\begin{DoxyCompactList}\small\item\em This function forces reelection process intended to be used to return excluded from the chain Nibo back in the chain or to restore the structure of the chain if some Nibo is down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{_nibo__actions_8c_ae24861a73f13a8c5221adc57a61efe76}{Reelection\+\_\+turn}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} own\+Id, short reelection\+\_\+delay, \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} maxnibos)
+\begin{DoxyCompactList}\small\item\em his function forces reelection process to change the order of Nibo ID accordingly to the new direction \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_nibo__actions_8c_a67150b07d01dda724fb57bd86a10c3e9}{Directionchange\+\_\+right}} ()
+\begin{DoxyCompactList}\small\item\em this function changes the direction of the Nibo by turning 180 degrees right \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_nibo__actions_8c_a51a200995d91d10e00758d1379b5a86b}{Directionchange\+\_\+left}} ()
+\begin{DoxyCompactList}\small\item\em this function changes the direction of the Nibo by turning 180 degrees left \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_nibo__actions_8c_a9b4440dba859246e8845f09783e695cb}{Turn\+\_\+left}} ()
+\begin{DoxyCompactList}\small\item\em this function turns nibo 90 degrees left \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_nibo__actions_8c_a9000d68ee84a0e5da8d34066d429a4b0}{Turn\+\_\+right}} ()
+\begin{DoxyCompactList}\small\item\em this function turns nibo 90 degrees right \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Set of functions used to control movements of Nibo. 
+
+\begin{DoxyAuthor}{Author}
+Alexandr Petrov 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+07.\+12.\+2019 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_nibo__actions_8c_a51a200995d91d10e00758d1379b5a86b}\label{_nibo__actions_8c_a51a200995d91d10e00758d1379b5a86b}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Directionchange\_left@{Directionchange\_left}}
+\index{Directionchange\_left@{Directionchange\_left}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Directionchange\_left()}{Directionchange\_left()}}
+{\footnotesize\ttfamily void Directionchange\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function changes the direction of the Nibo by turning 180 degrees left 
+
+delay allows to complete the operation without interruption\mbox{\Hypertarget{_nibo__actions_8c_a67150b07d01dda724fb57bd86a10c3e9}\label{_nibo__actions_8c_a67150b07d01dda724fb57bd86a10c3e9}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Directionchange\_right@{Directionchange\_right}}
+\index{Directionchange\_right@{Directionchange\_right}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Directionchange\_right()}{Directionchange\_right()}}
+{\footnotesize\ttfamily void Directionchange\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function changes the direction of the Nibo by turning 180 degrees right 
+
+delay allows to complete the operation without interruption\mbox{\Hypertarget{_nibo__actions_8c_a0d00aeba0adb937b4f7e246e671467de}\label{_nibo__actions_8c_a0d00aeba0adb937b4f7e246e671467de}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Reelection\_forced@{Reelection\_forced}}
+\index{Reelection\_forced@{Reelection\_forced}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Reelection\_forced()}{Reelection\_forced()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} Reelection\+\_\+forced (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{own\+Id,  }\item[{short}]{reelection\+\_\+delay,  }\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{maxnibos }\end{DoxyParamCaption})}
+
+
+
+This function forces reelection process intended to be used to return excluded from the chain Nibo back in the chain or to restore the structure of the chain if some Nibo is down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em own\+Id} & is the current ID of Nibo \\
+\hline
+{\em reelection\+\_\+delay} & is the predefined reelection delay for all Nibos \\
+\hline
+{\em maxnibos} & is the max number of Nibos in the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0b01 to make Nibo go through the normal ID claim process 
+\end{DoxyReturn}
+if ID of the Nibo is 0 (nibo was not taking part in the election
+
+set ID as the max possible ID
+
+disables uart0 port so Nibo would not recieve bytes from other Nibos before delay ends
+
+time of the delay depends on the ID of the Nibo. Nibos with lower I\+Ds will be able to participate sooner in this function all Nibos will return to their previous Roles if no changes were made to the chain before reelection
+
+enables the uart0 port and now Nibo can recieve and send messages to other Nibos\mbox{\Hypertarget{_nibo__actions_8c_ae24861a73f13a8c5221adc57a61efe76}\label{_nibo__actions_8c_ae24861a73f13a8c5221adc57a61efe76}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Reelection\_turn@{Reelection\_turn}}
+\index{Reelection\_turn@{Reelection\_turn}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Reelection\_turn()}{Reelection\_turn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} Reelection\+\_\+turn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{own\+Id,  }\item[{short}]{reelection\+\_\+delay,  }\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{maxnibos }\end{DoxyParamCaption})}
+
+
+
+his function forces reelection process to change the order of Nibo ID accordingly to the new direction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em own\+Id} & is the current ID of Nibo \\
+\hline
+{\em reelection\+\_\+delay} & is the predefined reelection delay for all Nibos \\
+\hline
+{\em maxnibos} & is the max number of Nibos in the chain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0b01 to make Nibo go through normal ID claim process 
+\end{DoxyReturn}
+disables uart0 port so Nibo would not recieve bytes from other Nibos before delay ends
+
+in this function all Nibos will get the opposite Roles if no changes were made to the chain before reelection because delay for the Nibos with lower I\+Ds will be Higher
+
+enables the uart0 port and now Nibo can recieve and send messages to other Nibos\mbox{\Hypertarget{_nibo__actions_8c_a0ba2a2a64a8563709143f2b4ab87b22d}\label{_nibo__actions_8c_a0ba2a2a64a8563709143f2b4ab87b22d}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Slowdown@{Slowdown}}
+\index{Slowdown@{Slowdown}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Slowdown()}{Slowdown()}}
+{\footnotesize\ttfamily short Slowdown (\begin{DoxyParamCaption}\item[{short}]{Speed }\end{DoxyParamCaption})}
+
+
+
+This function decreases the speed of the Nibo to -\/7 if Nibo was not moving or sets it to 0 if Nibo was moving forward. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Speed} & is the current speed of Nibo\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+decreased Speed of Nibo 
+\end{DoxyReturn}
+if Speed was $>$ 0
+
+Set Speed to 0 effectively stopping Nibo
+
+make Nibo go backwards\mbox{\Hypertarget{_nibo__actions_8c_adaeae15e188d8e437ac3de0fe0cde3cf}\label{_nibo__actions_8c_adaeae15e188d8e437ac3de0fe0cde3cf}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Speedup@{Speedup}}
+\index{Speedup@{Speedup}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Speedup()}{Speedup()}}
+{\footnotesize\ttfamily short Speedup (\begin{DoxyParamCaption}\item[{short}]{Speed }\end{DoxyParamCaption})}
+
+
+
+This function increases the speed of the Nibo to 7 if Nibo was not moving or sets it to 0 if Nibo was moving backward. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Speed} & is the current speed of Nibo\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+increased Speed of Nibo 
+\end{DoxyReturn}
+Set Speed to 0 effectively stopping Nibo
+
+Set Speed to 7\mbox{\Hypertarget{_nibo__actions_8c_a9b4440dba859246e8845f09783e695cb}\label{_nibo__actions_8c_a9b4440dba859246e8845f09783e695cb}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Turn\_left@{Turn\_left}}
+\index{Turn\_left@{Turn\_left}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Turn\_left()}{Turn\_left()}}
+{\footnotesize\ttfamily void Turn\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function turns nibo 90 degrees left 
+
+delay allows to complete the operation without interruption\mbox{\Hypertarget{_nibo__actions_8c_a9000d68ee84a0e5da8d34066d429a4b0}\label{_nibo__actions_8c_a9000d68ee84a0e5da8d34066d429a4b0}} 
+\index{Nibo\_actions.c@{Nibo\_actions.c}!Turn\_right@{Turn\_right}}
+\index{Turn\_right@{Turn\_right}!Nibo\_actions.c@{Nibo\_actions.c}}
+\doxysubsubsection{\texorpdfstring{Turn\_right()}{Turn\_right()}}
+{\footnotesize\ttfamily void Turn\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function turns nibo 90 degrees right 
+
+delay allows to complete the operation without interruption

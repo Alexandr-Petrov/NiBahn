@@ -1,0 +1,170 @@
+\hypertarget{protokoll_8c}{}\doxysection{src/protokoll.c File Reference}
+\label{protokoll_8c}\index{src/protokoll.c@{src/protokoll.c}}
+
+
+\+: The file \mbox{\hyperlink{protokoll_8c}{protokoll.\+c}} provides the formatting functions for the communication protocol between the nibos. Created on\+: Nov 19, 2019  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}x\+Bee.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}protokoll.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{protokoll_8c_a44739b8ceaa6b735b53ffb7d0dcd18f7}{build\+Send\+Data}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} reciver, \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} sender, \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} data)
+\begin{DoxyCompactList}\small\item\em libary for standard input and output operations of the Nibo2 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{protokoll_8c_a825f3c9dba6c78aee6b8ba136e89da02}{send\+Data\+Get\+Reciver}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data)
+\begin{DoxyCompactList}\small\item\em The function extracts the transmitter from the transmission data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{protokoll_8c_a78d7e069f327ea213cc0afa125123c68}{send\+Data\+Get\+Sender}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data)
+\begin{DoxyCompactList}\small\item\em Extracts the transmitter ID from the transmitted data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{protokoll_8c_a9aad1f29287e7ccceecaabc45130b8de}{send\+Data\+Get\+Data}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data)
+\begin{DoxyCompactList}\small\item\em Extracts the complete payload data, consisting of function set and function, from the transmitted data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{protokoll_8c_aa00a48d5cb235c679a19690f1862a9a8}{send\+Data\+Get\+Function\+Set}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data)
+\begin{DoxyCompactList}\small\item\em Extracts the function set from the payload data, from the transmitted data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} \mbox{\hyperlink{protokoll_8c_a3dedb2d80b621ff58202c25e12a0645d}{send\+Data\+Get\+Function}} (\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data)
+\begin{DoxyCompactList}\small\item\em Extracts the function from the payload data, from the transmitted data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: The file \mbox{\hyperlink{protokoll_8c}{protokoll.\+c}} provides the formatting functions for the communication protocol between the nibos. Created on\+: Nov 19, 2019 
+
+\begin{DoxyAuthor}{Author}
+\+: Jan Bischof 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 1.\+0 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{protokoll_8c_a44739b8ceaa6b735b53ffb7d0dcd18f7}\label{protokoll_8c_a44739b8ceaa6b735b53ffb7d0dcd18f7}} 
+\index{protokoll.c@{protokoll.c}!buildSendData@{buildSendData}}
+\index{buildSendData@{buildSendData}!protokoll.c@{protokoll.c}}
+\doxysubsubsection{\texorpdfstring{buildSendData()}{buildSendData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} build\+Send\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{reciver,  }\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{sender,  }\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{data }\end{DoxyParamCaption})}
+
+
+
+libary for standard input and output operations of the Nibo2 
+
+The function takes the receiver ID, the sender ID and the data and packs a byte from it.
+
+includes x\+Bee Communication be aware to include it locally with \char`\"{}\char`\"{} includes own header
+
+The function takes the receiver ID, the sender ID and the data and packs a byte from it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reciver} & Who should evaluate the data. Size 2 bits. \\
+\hline
+{\em sender} & Who sent the data. Size 2 bits. \\
+\hline
+{\em The} & user data consisting of function set and function. Size 4 bits.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ready-\/packed data is returned. 
+\end{DoxyReturn}
+2 bit
+
+shift to make room
+
+2 bit
+
+shift to make room
+
+4 bit\mbox{\Hypertarget{protokoll_8c_a9aad1f29287e7ccceecaabc45130b8de}\label{protokoll_8c_a9aad1f29287e7ccceecaabc45130b8de}} 
+\index{protokoll.c@{protokoll.c}!sendDataGetData@{sendDataGetData}}
+\index{sendDataGetData@{sendDataGetData}!protokoll.c@{protokoll.c}}
+\doxysubsubsection{\texorpdfstring{sendDataGetData()}{sendDataGetData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data\+Get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{send\+Data }\end{DoxyParamCaption})}
+
+
+
+Extracts the complete payload data, consisting of function set and function, from the transmitted data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\+Data} & The packed transmission data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the compiler payload data from the transmission data. 
+\end{DoxyReturn}
+zero set of the first 4 bits\mbox{\Hypertarget{protokoll_8c_a3dedb2d80b621ff58202c25e12a0645d}\label{protokoll_8c_a3dedb2d80b621ff58202c25e12a0645d}} 
+\index{protokoll.c@{protokoll.c}!sendDataGetFunction@{sendDataGetFunction}}
+\index{sendDataGetFunction@{sendDataGetFunction}!protokoll.c@{protokoll.c}}
+\doxysubsubsection{\texorpdfstring{sendDataGetFunction()}{sendDataGetFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data\+Get\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{send\+Data }\end{DoxyParamCaption})}
+
+
+
+Extracts the function from the payload data, from the transmitted data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\+Data} & The packed transmission data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the function. 
+\end{DoxyReturn}
+zero set of the first 6 bits\mbox{\Hypertarget{protokoll_8c_aa00a48d5cb235c679a19690f1862a9a8}\label{protokoll_8c_aa00a48d5cb235c679a19690f1862a9a8}} 
+\index{protokoll.c@{protokoll.c}!sendDataGetFunctionSet@{sendDataGetFunctionSet}}
+\index{sendDataGetFunctionSet@{sendDataGetFunctionSet}!protokoll.c@{protokoll.c}}
+\doxysubsubsection{\texorpdfstring{sendDataGetFunctionSet()}{sendDataGetFunctionSet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data\+Get\+Function\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{send\+Data }\end{DoxyParamCaption})}
+
+
+
+Extracts the function set from the payload data, from the transmitted data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\+Data} & The packed transmission data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the function set. 
+\end{DoxyReturn}
+zero set of the first 4 bits
+
+push to delete the last 2 bits.\mbox{\Hypertarget{protokoll_8c_a825f3c9dba6c78aee6b8ba136e89da02}\label{protokoll_8c_a825f3c9dba6c78aee6b8ba136e89da02}} 
+\index{protokoll.c@{protokoll.c}!sendDataGetReciver@{sendDataGetReciver}}
+\index{sendDataGetReciver@{sendDataGetReciver}!protokoll.c@{protokoll.c}}
+\doxysubsubsection{\texorpdfstring{sendDataGetReciver()}{sendDataGetReciver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data\+Get\+Reciver (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{send\+Data }\end{DoxyParamCaption})}
+
+
+
+The function extracts the transmitter from the transmission data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\+Data} & The packed transmission data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the recipient. 
+\end{DoxyReturn}
+push to delete the last 6 bits.\mbox{\Hypertarget{protokoll_8c_a78d7e069f327ea213cc0afa125123c68}\label{protokoll_8c_a78d7e069f327ea213cc0afa125123c68}} 
+\index{protokoll.c@{protokoll.c}!sendDataGetSender@{sendDataGetSender}}
+\index{sendDataGetSender@{sendDataGetSender}!protokoll.c@{protokoll.c}}
+\doxysubsubsection{\texorpdfstring{sendDataGetSender()}{sendDataGetSender()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}} send\+Data\+Get\+Sender (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{protokoll_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t}}}]{send\+Data }\end{DoxyParamCaption})}
+
+
+
+Extracts the transmitter ID from the transmitted data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\+Data} & The packed transmission data.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the sender 
+\end{DoxyReturn}
+push to delete the first 2 bits.
+
+push to delete the last 4 bits.

@@ -1,0 +1,72 @@
+\hypertarget{x_bee_8c}{}\doxysection{src/x\+Bee.c File Reference}
+\label{x_bee_8c}\index{src/xBee.c@{src/xBee.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}x\+Bee.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{x_bee_8c_ae7309d59102a8334360093b54bf851ee}{init\+U\+A\+R\+T0}} ()
+\begin{DoxyCompactList}\small\item\em Methods to send and receive messages The Xbee module receives the incoming data on the U\+A\+R\+T0-\/\+Port (This is where the X\+B\+E\+E-\/\+Module is connected to on your Nibo) Works with 9600 bit/s with 8N1 (see e.\+g. \href{http://universal_lexikon.deacademic.com/201427/8N1}{\texttt{ http\+://universal\+\_\+lexikon.\+deacademic.\+com/201427/8\+N1}}) ! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{x_bee_8c_a04e04dde3d4de31f71ecb36336696cb2}{x\+Bee\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{x_bee_8c_a2a085d39960c5a966858f82647e7dcf0}{x\+Bee\+\_\+send\+Byte}} (uint8\+\_\+t data)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{x_bee_8c_a2c5f83ad40939410530191f64d2d2ac8}{x\+Bee\+\_\+ready\+To\+Send}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{x_bee_8c_aa381f37b772845e9b8339b399a24482b}{x\+Bee\+\_\+received\+Data}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{x_bee_8c_a9256655d790ffe8b521e3758ce75719f}{x\+Bee\+\_\+read\+Byte}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{x_bee_8c_ae7309d59102a8334360093b54bf851ee}\label{x_bee_8c_ae7309d59102a8334360093b54bf851ee}} 
+\index{xBee.c@{xBee.c}!initUART0@{initUART0}}
+\index{initUART0@{initUART0}!xBee.c@{xBee.c}}
+\doxysubsubsection{\texorpdfstring{initUART0()}{initUART0()}}
+{\footnotesize\ttfamily void init\+U\+A\+R\+T0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Methods to send and receive messages The Xbee module receives the incoming data on the U\+A\+R\+T0-\/\+Port (This is where the X\+B\+E\+E-\/\+Module is connected to on your Nibo) Works with 9600 bit/s with 8N1 (see e.\+g. \href{http://universal_lexikon.deacademic.com/201427/8N1}{\texttt{ http\+://universal\+\_\+lexikon.\+deacademic.\+com/201427/8\+N1}}) ! 
+
+\begin{DoxyAuthor}{Author}
+Valentin Schroeter 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09.\+2019 Function which initialize the U\+A\+R\+T0 Port of the Nibo and sets the baudrate of the port Default baude rate of the modules is 9600 
+\end{DoxyDate}
+\mbox{\Hypertarget{x_bee_8c_a04e04dde3d4de31f71ecb36336696cb2}\label{x_bee_8c_a04e04dde3d4de31f71ecb36336696cb2}} 
+\index{xBee.c@{xBee.c}!xBee\_init@{xBee\_init}}
+\index{xBee\_init@{xBee\_init}!xBee.c@{xBee.c}}
+\doxysubsubsection{\texorpdfstring{xBee\_init()}{xBee\_init()}}
+{\footnotesize\ttfamily void x\+Bee\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializes and enables the x\+Bee Module \mbox{\Hypertarget{x_bee_8c_a9256655d790ffe8b521e3758ce75719f}\label{x_bee_8c_a9256655d790ffe8b521e3758ce75719f}} 
+\index{xBee.c@{xBee.c}!xBee\_readByte@{xBee\_readByte}}
+\index{xBee\_readByte@{xBee\_readByte}!xBee.c@{xBee.c}}
+\doxysubsubsection{\texorpdfstring{xBee\_readByte()}{xBee\_readByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t x\+Bee\+\_\+read\+Byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reads the next byte of received data \mbox{\Hypertarget{x_bee_8c_a2c5f83ad40939410530191f64d2d2ac8}\label{x_bee_8c_a2c5f83ad40939410530191f64d2d2ac8}} 
+\index{xBee.c@{xBee.c}!xBee\_readyToSend@{xBee\_readyToSend}}
+\index{xBee\_readyToSend@{xBee\_readyToSend}!xBee.c@{xBee.c}}
+\doxysubsubsection{\texorpdfstring{xBee\_readyToSend()}{xBee\_readyToSend()}}
+{\footnotesize\ttfamily uint8\+\_\+t x\+Bee\+\_\+ready\+To\+Send (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if x\+Bee is ready to transmit data \mbox{\Hypertarget{x_bee_8c_aa381f37b772845e9b8339b399a24482b}\label{x_bee_8c_aa381f37b772845e9b8339b399a24482b}} 
+\index{xBee.c@{xBee.c}!xBee\_receivedData@{xBee\_receivedData}}
+\index{xBee\_receivedData@{xBee\_receivedData}!xBee.c@{xBee.c}}
+\doxysubsubsection{\texorpdfstring{xBee\_receivedData()}{xBee\_receivedData()}}
+{\footnotesize\ttfamily uint8\+\_\+t x\+Bee\+\_\+received\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if x\+Bee received something \mbox{\Hypertarget{x_bee_8c_a2a085d39960c5a966858f82647e7dcf0}\label{x_bee_8c_a2a085d39960c5a966858f82647e7dcf0}} 
+\index{xBee.c@{xBee.c}!xBee\_sendByte@{xBee\_sendByte}}
+\index{xBee\_sendByte@{xBee\_sendByte}!xBee.c@{xBee.c}}
+\doxysubsubsection{\texorpdfstring{xBee\_sendByte()}{xBee\_sendByte()}}
+{\footnotesize\ttfamily void x\+Bee\+\_\+send\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+Transmits a single byte 

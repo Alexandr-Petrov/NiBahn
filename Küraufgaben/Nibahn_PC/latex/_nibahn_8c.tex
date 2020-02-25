@@ -1,0 +1,231 @@
+\hypertarget{_nibahn_8c}{}\doxysection{C\+:/\+Users/\+Alexandr/\+Desktop/\+Nibahn/src/\+Nibahn.c File Reference}
+\label{_nibahn_8c}\index{C:/Users/Alexandr/Desktop/Nibahn/src/Nibahn.c@{C:/Users/Alexandr/Desktop/Nibahn/src/Nibahn.c}}
+
+
+This is the main file of the Nibahn Project, used functions will be called from there.  
+
+
+{\ttfamily \#include $<$nibo/niboconfig.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/iodefs.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/bot.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/delay.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/copro.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/floor.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/spi.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$nibo/leds.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}x\+Bee.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}protokoll.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Nibo\+\_\+actions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_nibahn_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em libraries for standard functions of the Nibo2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file of the Nibahn Project, used functions will be called from there. 
+
+\begin{DoxyAuthor}{Author}
+Alexandr Petrov and Jan Bischof
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+04.\+12.\+2019 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_nibahn_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_nibahn_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Nibahn.c@{Nibahn.c}!main@{main}}
+\index{main@{main}!Nibahn.c@{Nibahn.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+libraries for standard functions of the Nibo2 
+
+library for standard input and output operations of the Nibo2 includes interrupts delay functions include delay operations includes library for interaction with floor sensors includes S\+PI communication library includes microcontroller hardware interrupts library for control of the L\+E\+Ds includes x\+Bee Communication includes functions and data types for x\+Bee communication in Nibahn Project includes functions for Nibo
+
+Main function of the \mbox{\hyperlink{_nibahn_8c}{Nibahn.\+c}} file. Does the main calculations and controls the behavior of Nibo initialize the L\+E\+Ds
+
+initialize the robot
+
+initialize spi-\/port
+
+initialize the floor sensors
+
+declare and initialize a variable for storing received bytes
+
+initialize x\+Bee Module
+
+for saving the values gotten from the sensors
+
+for saving the current Speed value and setting the reelection\+\_\+delay
+
+for saving the flag values
+
+for saving the ID of the Nibo and maximum number of Nibos in the chain
+
+Operation loop
+
+if Nibo is the master
+
+Sets the front L\+E\+Ds Orange
+
+if Nibo is not participating in the chain
+
+Sets the front L\+E\+Ds Red
+
+if Nibo is not a master
+
+Sets the front L\+E\+Ds Red
+
+if send buffer is not full and the ID of this Nibo was not established yet
+
+sets the flag of ID to established
+
+forms the byte to claim the ID
+
+sends the formed byte
+
+if the receive buffer is not empty
+
+-\/$>$ get next received data byte of the buffer
+
+if it\textquotesingle{}s a broadcast and not with the command from the second set or if it\textquotesingle{}s sent to the ID of this Nibo
+
+if it\textquotesingle{}s sent from PC, Master or from the Nibo with the ID of this Nibo
+
+if received byte has 00 in the commands set section and nibo participates in the chain commands set 1
+
+line will not be ignored if nibo gets anything from this set of commands
+
+if received byte has 00 in the commands section
+
+speed of the Nibo will be increased
+
+if received byte has 01 in the commands section
+
+speed of the Nibo will be decreased
+
+if received byte has 10 in the commands section
+
+setting the flag to 0 to mark that ID is not established
+
+Nibo will turn 180 degrees left
+
+Nibo will enter the reelection mode and get the starting ID (1) later, to participate in the reelection
+
+if received byte has 11 in the commands section
+
+setting the flag to 0 to mark that ID is not established
+
+Nibo will turn 180 degrees right
+
+Nibo will will enter the reelection mode and get the starting ID (1) later, to participate in the reelection
+
+if received byte has 01 in the commands set section commands Set 2
+
+line will be ignored if nibo gets anything from this set of commands
+
+if received byte has 00 in the commands section
+
+Speed of the Nibo will be increased
+
+if received byte has 01 in the commands section
+
+Speed of the Nibo will be decreased
+
+if received byte has 10 in the commands section
+
+Nibo will turn 90 degrees left
+
+if received byte has 11 in the commands section
+
+Nibo will turn 90 degrees right
+
+if received byte has 10 in the commands set section commands set 3
+
+if received byte has 00 in the commands section
+
+if send buffer is not full
+
+the byte to force other Nibo to select another ID is formed
+
+byte sent
+
+if received byte has 01 in the commands section this will be true only if some other Nibo claimed current ID of this Nibo before
+
+increment own ID
+
+setting the flag to 0 to mark that ID is not established
+
+if received byte has 10 in the commands section
+
+will start the forced reelection process
+
+setting the flag to 0 to mark that ID is not established
+
+if received byte has 11 in the commands section
+
+if send buffer is not full
+
+set the ID of the Nibo 00 effectively switching it off from the chain
+
+forms the byte that will start reelection through the broadcast
+
+send the formed byte
+
+if received byte has 11 in the commands set section commands set 4
+
+If received byte has 00 in the commands section and ID of the sender Nibo is lower than of this Nibo
+
+sets the speed to 0
+
+speed of the wheels will be 0 for the fixed period of time
+
+Reserved for new functions
+
+get the actual values from the floor sensors
+
+update the values in the coprocessor
+
+get the values from the right sensor near the line
+
+if black line is detected by the right line sensor and flag states that line shouldn\textquotesingle{}t be ignored
+
+if send buffer is not full
+
+forms the byte that will stop all Nibos with lower I\+Ds
+
+sends the formed byte
+
+slightly turns to the right
+
+get the values from the left sensor near the line
+
+if black line is detected by the left line sensor and flag states that line shouldn\textquotesingle{}t be ignored
+
+if send buffer is not full
+
+forms the byte that will stop all Nibos with lower I\+Ds
+
+sends the formed byte
+
+slightly turns to the right
+
+if black line is not detected
+
+set the speed to it\textquotesingle{}s current value defined by the Speed variable
+
+if both sensors simultaneously detect the black line and flag states that line shouldn\textquotesingle{}t be ignored
+
+move back a little
+
+some delay to slow down any action and give some time to turn or roll back
+
+end of the main program

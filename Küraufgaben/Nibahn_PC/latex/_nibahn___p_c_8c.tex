@@ -1,0 +1,71 @@
+\hypertarget{_nibahn___p_c_8c}{}\doxysection{src/\+Nibahn\+\_\+\+PC.c File Reference}
+\label{_nibahn___p_c_8c}\index{src/Nibahn\_PC.c@{src/Nibahn\_PC.c}}
+
+
+This is the control console of the Nibahn.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_nibahn___p_c_8c_a05706055bcde61db9bf74f16fc77a9ec}{dev}}~\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_nibahn___p_c_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the control console of the Nibahn. 
+
+\begin{DoxyAuthor}{Author}
+Alexandr Petrov
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+04.\+12.\+2019 
+\end{DoxyVersion}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_nibahn___p_c_8c_a05706055bcde61db9bf74f16fc77a9ec}\label{_nibahn___p_c_8c_a05706055bcde61db9bf74f16fc77a9ec}} 
+\index{Nibahn\_PC.c@{Nibahn\_PC.c}!dev@{dev}}
+\index{dev@{dev}!Nibahn\_PC.c@{Nibahn\_PC.c}}
+\doxysubsubsection{\texorpdfstring{dev}{dev}}
+{\footnotesize\ttfamily \#define dev~\char`\"{}/dev/tty\+U\+S\+B0\char`\"{}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_nibahn___p_c_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_nibahn___p_c_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{Nibahn\_PC.c@{Nibahn\_PC.c}!main@{main}}
+\index{main@{main}!Nibahn\_PC.c@{Nibahn\_PC.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+starts the user interaction cycle
+
+Sets the forming byte to 00000000 allows user to choose the destination address and forms destination address part of the byte accordingly
+
+Sets Source address to 00 because byte is going to be sent from the PC send from PC
+
+allows user to choose the commands set and forms commands set part of the byte accordingly
+
+allows user to choose the command from the first set if chosen and forms command part of the byte accordingly
+
+allows user to choose the command from the second set if chosen and forms command part of the byte accordingly
+
+allows user to choose the command from the third set if chosen and forms command part of the byte accordingly
+
+sends formed Byte
+
+before user chooses 0

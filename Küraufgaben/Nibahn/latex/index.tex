@@ -1,0 +1,50 @@
+\hypertarget{index_intro_sec}{}\doxysection{Introduction}\label{index_intro_sec}
+\hypertarget{index_info_sec}{}\doxysubsection{Project Information}\label{index_info_sec}
+As part of the T\+\_\+17 group that enrolled in the course Embedded Systems and Robotics 1 at T\+H-\/\+Wildau, we\textquotesingle{}ve got small robots controlled by a main controller and co-\/controller, lots of sensors, can move around. and also show the data on the display. As a task we have received mandatory tasks and tasks that we were able to choose ourselves. in the tasks that we have chosen we have implemented mandatory functions\+:
+\begin{DoxyEnumerate}
+\item Communication between the Nibo and PC using x\+Bee
+\item Communication between Nibos using x\+Bee
+\item Following the black line(extra function)
+\item Visualization of the role of the Nibo in the chain using the display and L\+E\+Ds
+\end{DoxyEnumerate}\hypertarget{index_software_sec}{}\doxysubsection{Used Software}\label{index_software_sec}
+
+\begin{DoxyEnumerate}
+\item V\+M\+Ware Image already provided by the Docent with a deployed projects Hello\+X\+Bee and Hellox\+Bee\+\_\+\+PC in Eclipse\+C\+DT that were used as the template for the own projects
+\item D\+I\+GI X\+C\+TU configuration and test utility for x\+Bee module
+\end{DoxyEnumerate}\hypertarget{index_hardware_sec}{}\doxysubsection{Used Hardware}\label{index_hardware_sec}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ID  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Component  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name and parameters  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Principle of operation   }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ID  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Component  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name and parameters  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Principle of operation   }\\\cline{1-5}
+\endhead
+I\+D\+\_\+1  &Main processor  &A\+Tmega128A, 128k\+Byte Flash , 16M\+Hz  &Execution of the program  &Electronic   \\\cline{1-5}
+I\+D\+\_\+2  &Coprocessor  &A\+Tmega88A, 8k\+Byte Flash , 16M\+Hz  &Motor control and floor color measurement  &Electronic   \\\cline{1-5}
+I\+D\+\_\+3  &Actuators  &2 motors (a 1.\+5W) with 1\+:25 ratio  &Movement of wheels  &Electromagnetic induction   \\\cline{1-5}
+I\+D\+\_\+4  &odometry  &2 IR line sensors  &Recognition of the black line  &Measurement of reflection of the infrared light   \\\cline{1-5}
+I\+D\+\_\+5  &L\+E\+Ds  &8 two-\/color L\+E\+Ds ( red/green )  &Display of the Role of the Nibo  &Visible light Radiation   \\\cline{1-5}
+I\+D\+\_\+6  &Communication module  &N\+X\+B2 x\+Bee extension  &Communication with PC and other Nibos  &Electromagnetic radiation   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{index_file_sec}{}\doxysection{Description of project files}\label{index_file_sec}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ №  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ №  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }\\\cline{1-3}
+\endhead
+1  &\mbox{\hyperlink{_nibahn_8c}{Nibahn.\+c}}  &Main file   \\\cline{1-3}
+2  &\mbox{\hyperlink{_nibo__actions_8c}{Nibo\+\_\+actions.\+c}}  &File with functions performing movement and communication funtions of Nibo   \\\cline{1-3}
+3  &\mbox{\hyperlink{_nibo__actions_8h}{Nibo\+\_\+actions.\+h}}  &Header file for \mbox{\hyperlink{_nibo__actions_8c}{Nibo\+\_\+actions.\+c}}   \\\cline{1-3}
+4  &\mbox{\hyperlink{protokoll_8c}{protokoll.\+c}}  &File with functions used to form bytes in the predefined format for communication   \\\cline{1-3}
+5  &\mbox{\hyperlink{protokoll_8h}{protokoll.\+h}}  &Header file for \mbox{\hyperlink{protokoll_8c}{protokoll.\+c}}, also used to define data types for the communication   \\\cline{1-3}
+6  &\mbox{\hyperlink{x_bee_8c}{x\+Bee.\+c}}  &File with functions that allow to work with x\+Bee module   \\\cline{1-3}
+7  &\mbox{\hyperlink{x_bee_8h}{x\+Bee.\+h}}  &Header file for \mbox{\hyperlink{x_bee_8c}{x\+Bee.\+c}}   \\\cline{1-3}
+\end{longtabu}

@@ -45,7 +45,7 @@ Robots also were very unstable in terms of keeping the same direction, so we hav
 
 ## Functionality showcase videos:
 
-1. Control of the chain, selection of the individual Nibo https://drive.google.com/open?id=1QtBUJoxZxJ2nohetzS1b1a6qXUtmyDRu
+1. Control of the chain, selection of the individual Nibo https://drive.google.com/open?id=1PpwHXfB1GmHDf9-8AqwZouC2QgUBE59_
 2. Control of the Individual Nibo, leaving the chain, reentering the chain https://drive.google.com/open?id=19amA65ENEu1S2u_hja86zCAshO6GQEz3
 3. Scalability demonstration https://drive.google.com/open?id=1PpwHXfB1GmHDf9-8AqwZouC2QgUBE59_
 

@@ -1,5 +1,5 @@
 # NiBahn
-Very well documented, C project for combining multiple Nibo robots into one managed chain
+Abundantly documented, C project for combining multiple Nibo robots into one managed chain
 
 ## Quick information 
 
@@ -24,9 +24,24 @@ We have divided the 8 bits TU in 4 sections:
 - Third 2 bits - the number of actions set
 - Fourth 2 bits - the number of action within the set
 
-That was enough to develop all functions
+That was enough to develop all required functions:
 
-Robots are very unstable in terms of keeping the same direction, so we have placed black line to make them orient on it and automatically correct the movement.
+### Functions List
+1. xxxx0000 - moving forward in the chain
+2. xxxx0001 - moving backward in the chain
+3. xxxx0010 - change direction via 180 degrees left turn
+4. xxxx0011 - change direction via 180 degrees right turn
+5. xxxx0100 - moving forward individually
+6. xxxx0101 - moving backward individually
+7. xxxx0110 - turn 90 degrees left
+8. xxxx0111 - turn 90 degrees right
+9. xxxx1000 - claim role
+10. xxxx1001 - step down in the role if already taken
+11. xxxx1010 - reelection
+12. xxxx1011 - stop participate in the chain
+13. xxxx1100 - stop if Nibo with higher role corrects the direction
+
+Robots also were very unstable in terms of keeping the same direction, so we have placed black line to make them orient on it and automatically correct the movement.
 
 ## Functionality showcase videos:
 

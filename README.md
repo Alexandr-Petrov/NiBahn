@@ -5,7 +5,7 @@ Very well documented, C project for combining multiple Nibo robots into one mana
 
 ### Concept
 
-![Concept](https://github.com/Alexandr-Petrov/NiBahn/images/idea.jpg)
+![Concept](https://github.com/Alexandr-Petrov/NiBahn/blob/master/images/idea.jpg)
 
 We wanted to develop the controllable chain of Nibo Robots with following roles:
 1. Master - identified by orange lights

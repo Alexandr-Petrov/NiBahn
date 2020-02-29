@@ -10,8 +10,8 @@ Very well documented, C project for combining multiple Nibo robots into one mana
 We wanted to develop the controllable chain of Nibo robots with following roles:
 1. Master - identified by orange lights
 2. Slave - identified by green lights
-Where we could also address individual robot and control it separately, remove it from the chain and place it back via wireless connection 
-For communication they were suited with XBee modules.
+Where we could also address individual robot and control it separately, remove it from the chain and place it back via wireless connection.
+For that purpose we used XBee modules on Nibos and on PC.
 
 But to control robots and communicate the roles we had only 8 bits that we could transmit in the TU (transmission unit), so we made our own protocol for communication.
 
@@ -24,9 +24,9 @@ We have divided the 8 bits TU in 4 sections:
 - Third 2 bits - the number of actions set
 - Fourth 2 bits - the number of action within the set
 
-Robots are very unstable in terms of keeping the same direction, so we have placed black line to make them orient on it and automatically correct the movement
+That was enough to develop all functions
 
-For that purpose we used XBee modules on Nibos and on PC
+Robots are very unstable in terms of keeping the same direction, so we have placed black line to make them orient on it and automatically correct the movement.
 
 ## Functionality showcase videos:
 

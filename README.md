@@ -19,10 +19,10 @@ But to control robots and communicate the roles we had only 8 bits that we could
 
 We have divided the 8 bits TU in 4 sections:
 
-First 2 bits - destination address
-Scond 2 bits - source address
-Third 2 bits - the number of actions set
-Fourth 2 bits - the number of action within the set
+- First 2 bits - destination address
+- Second 2 bits - source address
+- Third 2 bits - the number of actions set
+- Fourth 2 bits - the number of action within the set
 
 Robots are very unstable in terms of keeping the same direction, so we have placed black line to make them orient on it and automatically correct the movement
 

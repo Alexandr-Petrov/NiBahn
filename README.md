@@ -1,7 +1,7 @@
 # NiBahn
 Abundantly documented, C project for combining multiple Nibo robots into one managed chain
 
-**For functionality showcase videos please scroll down**
+**_For functionality showcase videos please scroll down_**
 
 ## Quick information 
 

@@ -38,7 +38,7 @@ That was enough to develop all required functions:
 9. xxxx1000 - claim role
 10. xxxx1001 - step down in the role if already taken
 11. xxxx1010 - reelection
-12. xxxx1011 - stop participate in the chain
+12. xxxx1011 - stop participating in the chain
 13. xxxx1100 - stop if Nibo with higher role corrects the direction
 
 Robots also were very unstable in terms of keeping the same direction, so we have placed black line to make them orient on it and automatically correct the movement.

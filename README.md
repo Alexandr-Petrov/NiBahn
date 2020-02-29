@@ -5,7 +5,7 @@ Very well documented, C project for combining multiple Nibo robots into one mana
 
 1. Control of the chain, selection of the individual Nibo https://drive.google.com/open?id=1QtBUJoxZxJ2nohetzS1b1a6qXUtmyDRu
 2. Control of the Individual Nibo, leaving the chain, reentering the chain https://drive.google.com/open?id=19amA65ENEu1S2u_hja86zCAshO6GQEz3
-3. Scalability Demonstration https://drive.google.com/open?id=1PpwHXfB1GmHDf9-8AqwZouC2QgUBE59_
+3. Scalability demonstration https://drive.google.com/open?id=1PpwHXfB1GmHDf9-8AqwZouC2QgUBE59_
 
 ## Showcase videos are also available with audio comments, in German:
  

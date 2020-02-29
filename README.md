@@ -3,7 +3,9 @@ Very well documented, C project for combining multiple Nibo robots into one mana
 
 ## Quick information 
 
-### Idea
+### Concept
+
+![Concept](https://octodex.github.com/images/yaktocat.png)
 
 We wanted to develop the controllable chain of Nibo Robots with following roles:
 1. Master - identified by orange lights
